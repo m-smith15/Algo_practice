@@ -28,3 +28,30 @@ If the index is on the left edge of the array, then the left sum is 0 because th
 Return the leftmost pivot index. If no such index exists, return -1.
 
 */
+
+var pivotIndex = function(nums) {
+    runningLeft = 0;
+    runningRight = 0;
+    for(let x = 0; x < nums.length; x++){
+        runningRight += nums[x]
+    }
+
+    for(let y = 0; y < nums.length; y++){
+
+        if(runningLeft == (runningRight - nums[y])){
+            return y;
+        }
+        else {
+            runningLeft += nums[y]
+            console.log("left: " + runningLeft)
+            runningRight -= nums[y]
+            console.log("right: " + runningRight)
+        }
+    }
+    return -1;
+};
+
+
+let nums = [1,7,3,6,5,6]
+console.log(pivotIndex(nums))
+// Output: 3
