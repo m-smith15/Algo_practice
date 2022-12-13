@@ -55,3 +55,23 @@ var pivotIndex = function(nums) {
 let nums = [1,7,3,6,5,6]
 console.log(pivotIndex(nums))
 // Output: 3
+
+/* https://leetcode.com/problems/isomorphic-strings/?envType=study-plan&id=level-1
+
+Given two strings s and t, determine if they are isomorphic.
+
+Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+
+*/ 
+
+var isIsomorphic = function(s, t) {
+    
+};
+
+let s = "egg", t = "add"
+// Output: true
+
+s = "foo", t = "bar"
+// Output: false * because you can't replace the o's with a AND r, only one
